@@ -41,3 +41,16 @@
   - Different dev and prod bundles
 - Add `.parcel-cache` and `dist` folders to `.gitignore` file
 - add `browserslist` in `package.json` file
+
+`Episode 3 : Laying the foundation`
+- setting up `start` and `build` scripts in package.json file
+- discussion about the replacement of `React.createElement` with `JSX`
+- discussion about `babel` which converts `JSX` to `React.createElement` object
+- attribute names to be written in `camelCase` in JSX
+- Types of components in React
+  - class based components -> OLD
+  - functional components -> Latest
+- React functional components are just a normal javascript functions which returns JSX
+- Functional component name should start with a capital letter
+- talks about component composition
+- 
