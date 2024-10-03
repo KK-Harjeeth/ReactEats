@@ -1,0 +1,43 @@
+`Episode 1 : Inception`
+- create a folder named namaste-react
+- used html , javascript to display `hello world` in browser
+- pulling react to our project using `CDN Links` of `react` and `react-dom`
+- create element using `React` and create root using `ReactDOM` 
+- render the created element to display it on browser
+- create an App.js file
+- move react code from index.html to App.js
+- create a nested html structure using React createElement
+- discussion about root.render()
+
+`Episode 2 : Igniting our App`
+- pushed our project to github
+- npm init
+- install the bundler `parcel` as Dev Dependency
+- `npm install -D parcel`
+- discussion about package.json and package-lock.json
+- discussion about node_modules
+- creating a `.gitignore` file and add node_modules in that file
+- `npx parcel index.html`
+- `npm install react`
+- `npm install react-dom`
+- Discussion About Parcel
+- #Parcel
+  - Dev Build
+  - Local Server
+  - Hot Module Replacement
+  - File watching algorithm written in C++
+  - Caching - faster builds
+  - Image Optimization
+  - Minify files
+  - Bundling
+  - Files Compress
+  - consistent hashing
+  - Code Splitting
+  - Differential Bundling - support older browsers
+  - Diagnostic
+  - Error Handling
+  - HTTPS
+  - Tree Shaking - remove unused code
+  - Different dev and prod bundles
+- Add `.parcel-cache` and `dist` folders to `.gitignore` file
+- add `browserslist` in `package.json` file
