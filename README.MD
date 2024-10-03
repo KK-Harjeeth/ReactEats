@@ -8,3 +8,7 @@
 - move react code from index.html to App.js
 - create a nested html structure using React createElement
 - discussion about root.render()
+
+`Episode 2 : Igniting our App`
+- pushed our project to github
+- npm init
