@@ -1,4 +1,4 @@
-`Episode 1 : Inception`
+# `Episode 1 : Inception`
 - create a folder named namaste-react
 - used html , javascript to display `hello world` in browser
 - pulling react to our project using `CDN Links` of `react` and `react-dom`
@@ -9,7 +9,7 @@
 - create a nested html structure using React createElement
 - discussion about root.render()
 
-`Episode 2 : Igniting our App`
+# `Episode 2 : Igniting our App`
 - pushed our project to github
 - npm init
 - install the bundler `parcel` as Dev Dependency
@@ -42,7 +42,7 @@
 - Add `.parcel-cache` and `dist` folders to `.gitignore` file
 - add `browserslist` in `package.json` file
 
-`Episode 3 : Laying the foundation`
+# `Episode 3 : Laying the foundation`
 - setting up `start` and `build` scripts in package.json file
 - discussion about the replacement of `React.createElement` with `JSX`
 - discussion about `babel` which converts `JSX` to `React.createElement` object
@@ -53,4 +53,97 @@
 - React functional components are just a normal javascript functions which returns JSX
 - Functional component name should start with a capital letter
 - talks about component composition
-- 
+- we can run any Javascript code inside {} parantheses inside JSX
+- JSX prevents Cross Site Scripting
+
+# `Episode 4 : Talk is cheap , show me the code`
+- Building a `Food Ordering App`
+- Planning the UI
+- Header
+  - Logo
+  - Nav Items
+- Body
+  - Search
+  - Restaurant Container
+    - Restaurant Card
+      - Image
+      - Name of the restaurant
+      - star rating
+      - cuisines
+      - time for delivery
+- Footer
+  - Copyright
+  - Links
+  - Address
+  - Contact
+- CSS for header
+- Building Header component
+- Building restaurant card component
+- DISCUSSION about `PROPS`
+- props are just like arguments to a function
+- discussion about `config driven UI`
+- copying the restaurants data from swiggy's response from it's API
+- Using `map function` to iterate through the restaurants list and map them to RestaurantCard component
+- Fixing `Each child in a list should have a "unique" key prop`
+  - pass `key={restaurant.id}` as prop to the RestaurantCard Component
+    - `WHY TO PASS KEYS ??`
+      - if any new restaurant is added to the list , React re-renders all the RestaurantCard components.
+      - using index as key is a bad practice
+
+# `Episode 5 : Let's get Hooked`
+- restructuring the Project
+- Moving all the `React code` into `src` folder
+- Created `Body.jsx` , `Header.jsx` , `RestaurantCard.jsx` files
+- moving `resList` to `utils` folder
+- `named export/import` vs `default export/import`
+- Trying to filter `top rated Restaurants` by clicking on a button
+- UI will not get updated if we use JavaScript filter method on resList
+- In order to do it we have `useState` hook
+- React Hooks are Normal JavaScript utility functions written Facebook Developers
+- `useState()` -> gives u super powerful state variable
+- `useEffect()` -> gives u
+- we have to import `useState` as `named import`
+- useState maintains the state of the component
+- `const [listOfRestaurants] = useState();` is same as `let listOfRestaurants;`
+- ## _**WHENEVER A STATE VARIABLE UPDATES REACT RE-RENDERS THE COMPONENT!!**_
+- talks about `Reconciliation algorithm` also known as `React Fiber`
+- ### _virtual DOM serves as an abstracted, lightweight copy of the real DOM, allowing for efficient updates and rendering of user interfaces._
+- `diff algorithm` => finds out the difference b/w old virtual DOM and new virtual DOM and updates the changes in the REAL DOM
+
+# `Episode 6 : Exploring the world`
+- `monolith architecture` vs `microservices architecture`
+- monolith -> _Monolithic architecture builds an application as a single, unified unit_
+- microservices -> _breaks it down into small, independent services that can be developed, deployed, and scaled separately_
+- fetching data dynamically from API
+- two approaches :
+  - `load -> API -> render`
+  - `load -> render -> API -> render` ==> Better UX
+- making an API call in `useEffect()` hook
+- useEffect() has two arguments
+  - callback function
+  - dependency array
+- ### when useEffect's callback function is called ?
+  - it is called after the component is rendered
+- using fetch() inbuilt function to fetch data from API
+- using `async/await`
+- ### `calling swiggy's API from local host has been blocked by CORS policy`
+  - browser is blocking us to call an API from one origin to another origin
+  - to bypass this error , we should install a chrome extension
+- updating the `listOfRestaurants` state variable after an `API call`
+- so that component re-renders
+- ### `Shimmer UI` instead of `Loading icon`
+- Building the `Shimmer` component
+- talks about `conditional rendering`
+- ### _adding a feature of Login/Logout toggle using useState()_
+- Building a search component
+
+# `Episode 7 : Finding the Path`
+- in `useEffect` , if we dont write dependency array `useEffect` is called on every render.
+- if dependency array is empty , then useEffect is called only once at the `initial render`.
+- if dependency array is [btnName] , then useEffect is called everytime btnName is updated.
+- ### _Never declare state variables outside the component_
+- ### Installing `react-router-dom`
+- Before creating routing go to `App.jsx`
+  - creating routing configuration
+  - import `{createBrowserRouter}` from `'react-router-dom'`
+  - 
