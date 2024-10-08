@@ -146,4 +146,26 @@
 - Before creating routing go to `App.jsx`
   - creating routing configuration
   - import `{createBrowserRouter}` from `'react-router-dom'`
-  - 
+  - `createBrowserRouter` function takes a `list of objects which contain path and element` as an argument
+  - import `{RouterProvider}` from `react-router-dom`
+  - and replace `<AppLayout/>` with `<RouterProvider/>` in `root.render(<AppLayout/>)`
+  - write `root.render(<RouterProvider router={appRouter}/>)`
+- Handling the error page
+- ### using `{useRouteError}` from `'react-router-dom'` which gives more info about the error
+- ### Keeping the `Header` intact without changing it
+  - Developing `children routes`
+  - importing `Outlet` from `'react-router-dom'`
+- importing `{Link}` from `"react-router-dom"` which works same like anchor tag
+- `anchor tag` reloads the entire page
+- adding Link tags to `about , Contact , Cart` pages
+- `TYPES OF ROUTING`
+  - client side routing vs server side routing : https://youtu.be/rNVcZklcmqU?si=BtwkEIJ6chxkad-d
+- Introduction to  `Dynamic Routes`
+- Building `RestaurantMenu.jsx` component
+- showing the menu items of a restaurant
+- ### using `{useParams}` hook to extract `restaurant_id`
+- ### making the restaurant cards clickable
+
+# `Episode 8 : Let's get Classy`
+- class will extend `React.Component`
+- 
