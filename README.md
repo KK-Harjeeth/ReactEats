@@ -168,4 +168,65 @@
 
 # `Episode 8 : Let's get Classy`
 - class will extend `React.Component`
-- 
+
+
+# `Episode 9: Optimizing our App`
+- creating custom hooks
+- single responsibility principle => each component should have a single responsibility 
+- modularity
+- easier for debugging , testable , reusable , maintainable
+- builiding a custom Hook `useRestaurantMenu()` inside utils folder
+- building a custom hook `useOnlineStatus()` 
+- adding `online status` color in header
+- using `chunking` or `code splitting` or `Dynamic Bundling` to minimize the size of final bundled js file
+- ## Lazy Loading (onDemand load) => i.e., the final js file should not have grocery code inside unless I open that page 
+- using `lazy` inbuilt function 
+- wrapping the `Grocery component` inside the `Suspense` inbuilt component
+
+
+# `Episode 10: Jo dikhta hai , vo bikta hai`
+- Sass -> syntactically awesome style sheets
+- Styled Components (used in industry)
+- material UI (popular in react community)
+- chakra UI , ant design
+- # Tailwind CSS => `Rapidly build modern websites without ever leaving your HTML.`
+- open tailwind css website => docs => framework guides => select parcel 
+- install tailwind css 
+- post css is also installed for transforming CSS with javascript
+- configure in `tailwind.config.js`
+- tailwind css gives you classes automatically 
+- installing `tailwind css intellisense` in VS Code
+
+# `Episode 10: Jo dikhta hai , vo bikta hai`
+- Higher order component takes a component and returns a component
+- buiding `promoted label` feature
+- talks about `data layer` and `UI layer`
+- adding sections in restaurant menu using API 
+- adding `accordion`
+
+# `Episode 11: Data is the new Oil`
+- `lifting the state up` => if we open one item category rest should collapse
+- ### prop drilling
+- ### context API to avoid prop drilling
+- creating `UserContext.js` in utils folder
+- talks about `useContext` hook
+
+# `Episode 12: Let's build our store`
+- ### two libraries Redux team offers are :
+  - React-Redux 
+  - Redux Toolkit
+- Redux store is big object and it is kept in a central global place
+- `slices` are introduced to not make this redux store object very big and clumsy
+- slices are logical partitions
+- cartSlice , userSlice
+- ### Building cartSlice
+```mermaid
+graph TD
+    A["User clicks 'Add' button"] --> B["Dispatches 'addToCart' action"]
+    B --> C["Action calls function"]
+    C --> D["Function executes modifications"]
+    D --> E["Function modifies cart state"]
+    E --> F["Updated cart state in store"]
+    F --> G["UI re-renders with updated cart"]
+
+  ```
